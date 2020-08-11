@@ -7,4 +7,4 @@ TAP_DANCE_ENABLE = yes
 LEADER_ENABLE = yes
 UNICODE_ENABLE = no
 
-# SRC += encoder.c keys.c oled.c
+SRC += encoder.c keys.c oled.c
