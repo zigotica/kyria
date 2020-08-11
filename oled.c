@@ -1,4 +1,4 @@
-#pragma once
+#include QMK_KEYBOARD_H
 
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 	return OLED_ROTATION_180;

@@ -5,4 +5,6 @@ RGBLIGHT_ENABLE = no
 COMBO_ENABLE = yes
 TAP_DANCE_ENABLE = yes
 LEADER_ENABLE = yes
-UNICODE_ENABLE = yes
+UNICODE_ENABLE = no
+
+# SRC += encoder.c keys.c oled.c
