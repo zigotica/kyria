@@ -4,6 +4,16 @@
 #define ZK_SEMI TD(1)
 #define ZK_COLON TD(2)
 
+// COMBOS
+// -----------------------------------------------------------
+const uint16_t PROGMEM sftup_combo[] = {KC_LSFT, KC_UP, COMBO_END};
+const uint16_t PROGMEM sftdn_combo[] = {KC_LSFT, KC_DOWN, COMBO_END};
+
+combo_t key_combos[COMBO_COUNT] = {
+  [0] = COMBO(sftup_combo, KC_LEFT),
+  [1] = COMBO(sftdn_combo, KC_RIGHT)
+};
+
 // TAP DANCE SEQUENCES AND SHORTCUTS
 // -----------------------------------------------------------
 void ios_media(qk_tap_dance_state_t *state, void *user_data) {
