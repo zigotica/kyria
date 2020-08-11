@@ -2,7 +2,6 @@
 
 #define MASTER_RIGHT
 
-#define COMBO_COUNT 2
 #define TAPPING_TERM 300
 
 #define LEADER_PER_KEY_TIMING
