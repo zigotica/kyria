@@ -21,6 +21,8 @@ void encoder_update_user(uint8_t index, bool clockwise)
       } else {
         tap_code(KC_LEFT);
       }
+      // reattach the mod so we can keep rotating
+      register_code(KC_LCTL);
     } else {
       if (clockwise) {
         tap_code(KC_DOWN);
