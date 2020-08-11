@@ -21,22 +21,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Base Layer: QWERTY
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * | MEDIA  |   Q  |   W  |   E  |   R  |   T  |                              |   Y  |   U  |   I  |   O  |   P  |  ENC   |
+ * | MEDIA  |   Q  |   W  |   E  |   R  |   T  |                              |   Y  |   U  |   I  |   O  |   P  | DEL/ENC|
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
  * |  TAB   |   A  |   S  |  D   |   F  |   G  |                              |   H  |   J  |   K  |   L  | -  _ |  =  +  |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * | Shift  |   Z  |   X  |   C  |   V  |   B  |  { [ | (    |  | Bksp |  Up  |   N  |   M  | ,  < | . >  | /  ? |  '  "  |
+ * | Shift  |   Z  |   X  |   C  |   V  |   B  |  { [ | (    |  |      | Bksp |   N  |   M  | ,  < | . >  | /  ? |  '  "  |
  * |        |      |      |      |      |      |      |      |  |      | Raise|      |      | TD ; | TD : |      |        |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
- *                        | ` ~  | CTRL | CMD  | Space| Esc  |  | Enter| Down | LEAD | AltGr| \  | |
+ *                        | ` ~  | CTRL | CMD  | Space| Esc  |  | Enter| Space| LEAD | AltGr| \  | |
  *                        |      |      |      | Lower| Raise|  |      | Lower|      |      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
     [_QWERTY] = LAYOUT(
-      ZK_MEDIA, KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                                                                       KC_Y,    KC_U,    KC_I,     KC_O,       KC_P,      KC_PIPE,
+      ZK_MEDIA, KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                                                                       KC_Y,    KC_U,    KC_I,     KC_O,       KC_P,      KC_DEL,
       KC_TAB,   KC_A,   KC_S,   KC_D,   KC_F,   KC_G,                                                                       KC_H,    KC_J,    KC_K,     KC_L,       KC_MINUS,  KC_EQUAL,
-      KC_LSFT,  KC_Z,   KC_X,   KC_C,   KC_V,   KC_B, KC_LEFT_CURLY_BRACE, KC_LEFT_PAREN,      KC_BSPC, LT(_RAISE, KC_UP),  KC_N,    KC_M,    ZK_SEMI,  ZK_COLON,   KC_SLSH,   KC_QUOTE,
-                        KC_GRAVE, MOD_LCTL, KC_LGUI,  LT(_LOWER, KC_SPC), LT(_RAISE, KC_ESC),  KC_ENT, LT(_LOWER, KC_DOWN), KC_LEAD, KC_RALT, KC_BSLASH
+      KC_LSFT,  KC_Z,   KC_X,   KC_C,   KC_V,   KC_B, KC_LEFT_CURLY_BRACE, KC_LEFT_PAREN,      _______, LT(_RAISE, KC_BSPC),  KC_N,    KC_M,    ZK_SEMI,  ZK_COLON,   KC_SLSH,   KC_QUOTE,
+                        KC_GRAVE, MOD_LCTL, KC_LGUI,  LT(_LOWER, KC_SPC), LT(_RAISE, KC_ESC),  KC_ENT, LT(_LOWER, KC_SPC), KC_LEAD, KC_RALT, KC_BSLASH
     ),
 
 /*
