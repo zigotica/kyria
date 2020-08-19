@@ -2,7 +2,7 @@
 
 
 enum layers {
-    _QWERTY = 0,
+    _TRIA = 0,
     _LOWER,
     _RAISE,
     _ADJUST,
@@ -36,9 +36,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 
 // LEADER KEY SHORTCUTS
 // -----------------------------------------------------------
-#ifdef LEADER_ENABLE
 LEADER_EXTERNS();
-
 
 void matrix_scan_user(void) {
   LEADER_DICTIONARY() {
@@ -60,7 +58,6 @@ void matrix_scan_user(void) {
     }
   }
 }
-#endif
 
 // OLED
 // -----------------------------------------------------------
@@ -95,13 +92,13 @@ static void render_qmk_logo(void) {
 static void render_status(void) {
     // QMK Logo and version information
     render_qmk_logo();
-    oled_write_P(PSTR("Kyria rev1.2\n\n"), false);
+    oled_write_P(PSTR("Kyria v1.2\n\n"), false);
 
     // Host Keyboard Layer Status
     oled_write_P(PSTR("Layer: "), false);
     switch (get_highest_layer(layer_state)) {
-        case _QWERTY:
-            oled_write_P(PSTR("QWERTY\n"), false);
+        case _TRIA:
+            oled_write_P(PSTR("TRIA\n"), false);
             break;
         case _LOWER:
             oled_write_P(PSTR("LOWER\n"), false);
@@ -113,7 +110,7 @@ static void render_status(void) {
             oled_write_P(PSTR("FNC\n"), false);
             break;
         default:
-            oled_write_P(PSTR("Undefined\n"), false);
+            oled_write_P(PSTR("Undef\n"), false);
     }
 
     // Host Keyboard LED Status
@@ -171,25 +168,25 @@ void encoder_update_user(uint8_t index, bool clockwise)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /*
- * Base Layer: QWERTY
+ * Base Layer: TRIA
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * | MEDIA  |   Q  |   W  |   E  |   R  |   T  |                              |   Y  |   U  |   I  |   O  |   P  | DEL/ENC|
+ * | MEDIA  |   Y  |   W  |  X   |   D  | ` ~  |                              |   F  |   H  |   L  |   P  |   B  |RSHF/ENC|
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |  TAB   |   A  |   S  |  D   |   F  |   G  |                              |   H  |   J  |   K  |   L  | -  _ |  =  +  |
+ * |  TAB   |   T  |   R  |  I   |   A  | ' "  |                              |   K  |   G  |   S  |   N  |   M  |  =  +  |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * | Shift  |   Z  |   X  |   C  |   V  |   B  |  { [ | (    |  |      | Bksp |   N  |   M  | ,  < | . >  | /  ? |  '  "  |
+ * | LShift |   Z  |   Q  |  U   |   O  | [  { |  (   | \  | |  |      | LEAD |   J  |   C  |   V  | ,  < | . >  |  -  _  |
  * |        |      |      |      |      |      |      |      |  |      | Raise|      |      | TD ; | TD : |      |        |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
- *                        | ` ~  | CTRL | CMD  | Space| Esc  |  | Enter| Space| LEAD | AltGr| \  | |
+ *                        | /  ? | CTRL | CMD  | Space| Esc  |  | Enter| E    | AltGr| BACK |      |
  *                        |      |      |      | Lower| Raise|  |      | Lower|      |      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
-    [_QWERTY] = LAYOUT(
-      ZK_MEDIA, KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                                                                       KC_Y,    KC_U,    KC_I,     KC_O,       KC_P,      KC_DEL,
-      KC_TAB,   KC_A,   KC_S,   KC_D,   KC_F,   KC_G,                                                                       KC_H,    KC_J,    KC_K,     KC_L,       KC_MINUS,  KC_EQUAL,
-      KC_LSFT,  KC_Z,   KC_X,   KC_C,   KC_V,   KC_B, KC_LBRACKET, KC_LEFT_PAREN,      _______, LT(_RAISE, KC_BSPC),  KC_N,    KC_M,    ZK_SEMI,  ZK_COLON,   KC_SLSH,   KC_QUOTE,
-                        KC_GRAVE, KC_LCTL, KC_LGUI,  LT(_LOWER, KC_SPC), LT(_RAISE, KC_ESC),  KC_ENT, LT(_LOWER, KC_SPC), KC_LEAD, KC_RALT, KC_BSLASH
+    [_TRIA] = LAYOUT(
+      ZK_MEDIA,   KC_Y, KC_W, KC_X, KC_D, KC_GRV,                                                                         KC_F, KC_H, KC_L, KC_P, KC_B,        KC_RSFT, 
+      KC_TAB,     KC_T, KC_R, KC_I, KC_A, KC_QUOT,                                                                        KC_K, KC_G, KC_S, KC_N, KC_M,        KC_EQL, 
+      KC_LSFT,    KC_Z, KC_Q, KC_U, KC_O, KC_LBRC,    KC_LPRN, KC_BSLS,                   KC_NO, LT(_RAISE, KC_LEAD),     KC_J, KC_C, KC_V, ZK_SEMI, ZK_COLON, KC_MINS, 
+                      KC_SLSH, KC_LCTL, KC_LGUI, LT(_LOWER, KC_SPC), LT(_RAISE, KC_ESC),    KC_ENT, LT(_LOWER, KC_E), KC_RALT, KC_BSPC, KC_NO
     ),
 
 /*
