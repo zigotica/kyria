@@ -9,6 +9,7 @@
 
 #ifdef OLED_DRIVER_ENABLE
   #define OLED_DISPLAY_128X64
+  #define OLED_TIMEOUT 10000
 #endif
 
 #ifdef RGBLIGHT_ENABLE
@@ -18,9 +19,12 @@
   #define RGBLIGHT_VAL_STEP 8
 #endif
 
-// EC11K encoders have a different resolution than other EC11 encoders.
-// When using the default resolution of 4, if you notice your encoder skipping
-// every other tick, lower the resolution to 2.
-#define ENCODER_RESOLUTION 2
-// Also, flip direction
-#define ENCODER_DIRECTION_FLIP
+#ifdef ENCODER_ENABLE
+  // EC11K encoders have a different resolution than other EC11 encoders.
+  // When using the default resolution of 4, if you notice your encoder skipping
+  // every other tick, lower the resolution to 2.
+  #define ENCODER_RESOLUTION 2
+  // Also, flip direction
+  #define ENCODER_DIRECTION_FLIP
+#endif
+
