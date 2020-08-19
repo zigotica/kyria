@@ -176,17 +176,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |  TAB   |   T  |   R  |  I   |   A  | ' "  |                              |   K  |   G  |   S  |   N  |   M  |  =  +  |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
  * | LShift |   Z  |   Q  |  U   |   O  | [  { |  (   | \  | |  |      | LEAD |   J  |   C  |   V  | ,  < | . >  |  -  _  |
- * |        |      |      |      |      |      |      |      |  |      | Raise|      |      | TD ; | TD : |      |        |
+ * |        |      |      |      |      |      |      |      |  |      |      |      |      | TD ; | TD : |      |        |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
  *                        | /  ? | CTRL | CMD  | Space| Esc  |  | Enter| E    | AltGr| BACK |      |
- *                        |      |      |      | Lower| Raise|  |      | Lower|      |      |      |
+ *                        |      |      |      | Lower| Raise|  | Raise| Lower|      |      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
     [_TRIA] = LAYOUT(
       ZK_MEDIA,   KC_Y, KC_W, KC_X, KC_D, KC_GRV,                                                                         KC_F, KC_H, KC_L, KC_P, KC_B,        KC_RSFT, 
       KC_TAB,     KC_T, KC_R, KC_I, KC_A, KC_QUOT,                                                                        KC_K, KC_G, KC_S, KC_N, KC_M,        KC_EQL, 
-      KC_LSFT,    KC_Z, KC_Q, KC_U, KC_O, KC_LBRC,    KC_LPRN, KC_BSLS,                   KC_NO, LT(_RAISE, KC_LEAD),     KC_J, KC_C, KC_V, ZK_SEMI, ZK_COLON, KC_MINS, 
-                      KC_SLSH, KC_LCTL, KC_LGUI, LT(_LOWER, KC_SPC), LT(_RAISE, KC_ESC),    KC_ENT, LT(_LOWER, KC_E), KC_RALT, KC_BSPC, KC_NO
+      KC_LSFT,    KC_Z, KC_Q, KC_U, KC_O, KC_LBRC,    KC_LPRN, KC_BSLS,                   KC_NO, KC_LEAD,                 KC_J, KC_C, KC_V, ZK_SEMI, ZK_COLON, KC_MINS, 
+                      KC_SLSH, KC_LCTL, KC_LGUI, LT(_LOWER, KC_SPC), LT(_RAISE, KC_ESC),   LT(_RAISE, KC_ENT) , LT(_LOWER, KC_E), KC_RALT, KC_BSPC, KC_NO
     ),
 
 /*
