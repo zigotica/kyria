@@ -26,11 +26,15 @@ void ios_media(qk_tap_dance_state_t *state, void *user_data) {
 #define ZK_MEDIA TD(0)
 #define ZK_SEMI TD(1)
 #define ZK_COLON TD(2)
+#define ZK_BRC TD(3)
+#define ZK_PRN TD(4)
 
 qk_tap_dance_action_t tap_dance_actions[] = {
     [0] = ACTION_TAP_DANCE_FN(ios_media),
     [1] = ACTION_TAP_DANCE_DOUBLE(KC_COMM, KC_SCOLON),
     [2] = ACTION_TAP_DANCE_DOUBLE(KC_DOT, KC_COLON),
+    [3] = ACTION_TAP_DANCE_DOUBLE(KC_LBRC, KC_RBRC),
+    [4] = ACTION_TAP_DANCE_DOUBLE(KC_LPRN, KC_RPRN),
 };
 
 
@@ -185,7 +189,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_TRIA] = LAYOUT(
       ZK_MEDIA,   KC_Y, KC_W, KC_X, KC_D, KC_GRV,                                                                         KC_F, KC_H, KC_L, KC_P, KC_B,        KC_RSFT, 
       KC_TAB,     KC_T, KC_R, KC_I, KC_A, KC_QUOT,                                                                        KC_K, KC_G, KC_S, KC_N, KC_M,        KC_EQL, 
-      KC_LSFT,    KC_Z, KC_Q, KC_U, KC_O, KC_LBRC,    KC_LPRN, KC_BSLS,                   KC_NO, KC_LEAD,                 KC_J, KC_C, KC_V, ZK_SEMI, ZK_COLON, KC_MINS, 
+      KC_LSFT,    KC_Z, KC_Q, KC_U, KC_O, ZK_BRC,    ZK_PRN, KC_BSLS,                     KC_NO, KC_LEAD,                 KC_J, KC_C, KC_V, ZK_SEMI, ZK_COLON, KC_MINS, 
                       KC_SLSH, KC_LCTL, KC_LGUI, LT(_LOWER, KC_SPC), LT(_RAISE, KC_ESC),   LT(_RAISE, KC_ENT) , LT(_LOWER, KC_E), KC_RALT, KC_BSPC, KC_NO
     ),
 
