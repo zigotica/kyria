@@ -49,16 +49,16 @@ void matrix_scan_user(void) {
 
     // LEAD then T: COMMAND + SHIFT + T
     SEQ_ONE_KEY(KC_T) {
-        SEND_STRING(SS_LGUI(SS_LSFT("t")));
+      SEND_STRING(SS_LGUI(SS_LSFT("t")));
     }
 
-    // LEAD then ZZ: save and exit Vim
-    SEQ_TWO_KEYS(KC_Z, KC_Z) {
-        SEND_STRING(SS_TAP(X_ESC) SS_LSFT("zz"));
+    // LEAD then Z: save and exit Vim
+    SEQ_ONE_KEY(KC_Z) {
+      SEND_STRING(SS_TAP(X_ESC) SS_LSFT("zz"));
     }
-    // LEAD then ZQ: exit Vim (without saving)
-    SEQ_TWO_KEYS(KC_Z, KC_Q) {
-        SEND_STRING(SS_TAP(X_ESC) SS_LSFT("zq"));
+    // LEAD then Q: exit Vim (without saving)
+    SEQ_ONE_KEY(KC_Q) {
+      SEND_STRING(SS_TAP(X_ESC) SS_LSFT("zq"));
     }
   }
 }
