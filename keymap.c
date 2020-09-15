@@ -175,7 +175,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Base Layer: TRIA
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * | MEDIA  |  ` ~ |   W  |  X   |   D  |  Y   |                              |   F  |   H  |   B  |   P  | ' "  |RSHF/ENC|
+ * | MEDIA  |  ` ~ |   W  |  D   |   Y  |  X   |                              |   F  |   H  |   P  |   B  | ' "  |RSHF/ENC|
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
  * |  TAB   |   T  |   R  |  I   |   A  |  G   |                              |   K  |   L  |   S  |   N  |   M  |  =  +  |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
@@ -187,7 +187,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        `----------------------------------'  `----------------------------------'
  */
     [_TRIA] = LAYOUT(
-      ZK_MEDIA,   KC_GRV, KC_W, KC_X, KC_D, KC_Y,                                                                         KC_F, KC_H, KC_B, KC_P, KC_QUOT,    KC_RSFT, 
+      ZK_MEDIA,   KC_GRV, KC_W, KC_D, KC_Y, KC_X,                                                                         KC_F, KC_H, KC_P, KC_B, KC_QUOT,     KC_RSFT, 
       KC_TAB,       KC_T, KC_R, KC_I, KC_A, KC_G,                                                                         KC_K, KC_L, KC_S, KC_N, KC_M,        KC_EQL, 
       KC_LSFT,    ZK_BRC, KC_Q, KC_U, KC_O, KC_Z,    ZK_PRN, KC_BSLS,                     KC_NO, KC_LEAD,                 KC_J, KC_C, KC_V, ZK_SEMI, ZK_COLON, KC_MINS, 
                      KC_NO , KC_LCTL, KC_LGUI, LT(_LOWER, KC_SPC), LT(_RAISE, KC_ESC),   LT(_RAISE, KC_ENT) , LT(_LOWER, KC_E), KC_BSPC, KC_RALT, KC_SLSH 
