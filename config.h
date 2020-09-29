@@ -2,7 +2,11 @@
 
 #define MASTER_RIGHT
 
-#define TAPPING_TERM 300
+// these should work better for homerow modifiers
+#define TAPPING_TERM 200
+#define PERMISSIVE_HOLD
+#define IGNORE_MOD_TAP_INTERRUPT
+#define TAPPING_FORCE_HOLD
 
 #define LEADER_PER_KEY_TIMING
 #define LEADER_TIMEOUT 300
