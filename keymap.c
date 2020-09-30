@@ -185,7 +185,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
  * |        |      |      |      |      |      |                              |      |      |      |      |      |        |
  * |  TAB   |   T  |   R  |  I   |   A  |  G   |                              |   K  |   L  |   S  |   N  |   M  |  =  +  |
- * |        | META |  CTR | SHFT |  ALT |      |                              |      |  ALT | SHFT |  CTL | META |        |
+ * |        | ALT  |  CTR | SHFT | META |      |                              |      | META | SHFT |  CTL | ALT  |        |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
  * |        |      |      |      |      |      |      |      |  |      |      |      |      |      |      |      |        |
  * | LShift | [  { |   Q  |  U   |   O  |  Z   |  (   |      |  |      | LEAD |   J  |   C  |   V  | ,  < | . >  |  -  _  |
@@ -198,7 +198,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_TRIA] = LAYOUT(
       KC_ESC,    KC_GRV,       KC_W,         KC_D,         KC_Y,         KC_X,                                             KC_F, KC_H,         KC_P,         KC_B,         KC_QUOT,      KC_SLSH,
-      KC_TAB,    LGUI_T(KC_T), LCTL_T(KC_R), LSFT_T(KC_I), LALT_T(KC_A), KC_G,                                             KC_K, RALT_T(KC_L), LSFT_T(KC_S), RCTL_T(KC_N), LGUI_T(KC_M), KC_EQL,
+      KC_TAB,    LALT_T(KC_T), LCTL_T(KC_R), LSFT_T(KC_I), LGUI_T(KC_A), KC_G,                                             KC_K, RGUI_T(KC_L), LSFT_T(KC_S), RCTL_T(KC_N), RALT_T(KC_M), KC_EQL,
       KC_LSFT,   ZK_BRC,       KC_Q,         KC_U,         KC_O,         KC_Z,    ZK_PRN, _______,      KC_NO, KC_LEAD,    KC_J, KC_C,         KC_V,         KC_MINS,      ZK_SEMI,      ZK_COLON,
                                     ZK_MEDIA, _______, LT(_NUM, KC_TAB), LT(_NAV, KC_SPC), KC_ESC,      KC_ENT, LT(_SYM, KC_E) , LT(_FN, KC_BSPC), _______, KC_RSFT
     ),
