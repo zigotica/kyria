@@ -188,8 +188,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |        | ALT  |  CTR | SHFT | META |      |                              |      | META | SHFT |  CTL | ALT  |        |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
  * |        |      |      |      |      |      |      |      |  |      |      |      |      |      |      |      |        |
- * | LShift | [  { |   X  |  C   |   V  |  D   |  (   |      |  |      | LEAD |   J  |   L  |   Z  | ,  < | . >  |  -  _  |
- * |        | TD ]}|      |      |      |      | TD ) |      |  |      |      |      |      |      | TD ; | TD : |        |
+ * | LShift | [  { |   X  |  C   |   V  |  B   |  (   |      |  |      | LEAD |   J  |   L  |   Z  | -  _ | ,  < |  .  >  |
+ * |        | TD ]}|      |      |      |      | TD ) |      |  |      |      |      |      |      |      | TD ; |  TD :  |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
  *                     |         |      |      |      |      |  |      |      |      |      |         |
  *                     | ENCODER |      | TAB  | Space| Esc  |  | Enter| E    | BACK |      | ENCODER |
@@ -199,7 +199,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_STENAI] = LAYOUT(
       KC_ESC,    KC_GRV,       KC_W,         KC_F,         KC_P,         KC_G,                                             KC_K, KC_Q,         KC_U,         KC_Y,         KC_QUOT,      KC_SLSH,
       KC_TAB,    LALT_T(KC_H), LCTL_T(KC_R), LSFT_T(KC_S), LGUI_T(KC_T), KC_D,                                             KC_M, RGUI_T(KC_N), LSFT_T(KC_A), RCTL_T(KC_I), RALT_T(KC_O), KC_EQL,
-      KC_LSFT,   ZK_BRC,       KC_X,         KC_C,         KC_V,         KC_D,    ZK_PRN, _______,      KC_NO, KC_LEAD,    KC_J, KC_L,         KC_Z,         KC_MINS,      ZK_SEMI,      ZK_COLON,
+      KC_LSFT,   ZK_BRC,       KC_X,         KC_C,         KC_V,         KC_B,    ZK_PRN, _______,      KC_NO, KC_LEAD,    KC_J, KC_L,         KC_Z,         KC_MINS,      ZK_SEMI,      ZK_COLON,
                                     ZK_MEDIA, _______, LT(_NUM, KC_TAB), LT(_NAV, KC_SPC), KC_ESC,      KC_ENT, LT(_SYM, KC_E) , LT(_FN, KC_BSPC), _______, KC_RSFT
     ),
 
